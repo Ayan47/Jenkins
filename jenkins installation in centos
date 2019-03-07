@@ -1,0 +1,37 @@
+Prerequirements:
+
+For jenkins JAVA is manadatory
+java 1.8 and above versions only will support for jenkins
+
+install JAVA 
+sudo yum install java
+set the java environment variable for all users
+find /usr -name java
+copy the java path for java1.8
+vim /etc/profile
+
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/ 
+export JRE_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre 
+export PATH=$PATH:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre/bin
+
+:wq!
+RESTART YOU INSTANT
+
+install jenkins
+
+sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
+sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+sudo yum -y install jenkins-2.89.4
+
+goto browser and access localhost:8080 or public_ip:8080
+it will rout you into passwrod page in password page paste your paswwod. This password you get from server where you installed your jenkins
+cat /var/lib/jenkins/secrets/initialAdminPassword  or  $JENKINS_HOME/secrets/initialAdminPassword
+copy and paste the password
+will move to otherpage where you need to give your details
+username:
+password:
+conform password:
+full name:
+email:
+
+then login to Jenkins home page with you credential....
