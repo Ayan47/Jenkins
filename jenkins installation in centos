@@ -4,7 +4,7 @@ For jenkins JAVA is manadatory
 java 1.8 and above versions only will support for jenkins
 
 install JAVA 
-sudo yum install java
+sudo yum -y install git java-1.8.0-openjdk
 set the java environment variable for all users
 find /usr -name java
 copy the java path for java1.8
