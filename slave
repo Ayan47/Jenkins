@@ -1,0 +1,18 @@
+ 9  sudo useradd -d /var/lib/jenkins jenkins
+   10  ssh-keygen
+   11  cat /home/ec2-user/.ssh/id_rsa.pub
+   12  sudo mkdir /var/lib/jenkins/.ssh
+  
+   14  sudo vi  /var/lib/jenkins/.ssh/authorized_keys
+paste public key here and :wq!
+   15  sudo -i
+   16  cat /home/ec2-user/.ssh/id_rsa.pub
+   17  sudo vi /var/lib/jenkins/.ssh/authorized_keys
+   18  sudo chown -R jenkins:jenkins /var/lib/jenkins/.ssh
+   19  cat /home/ec2-user/.ssh/id_rsa
+
+paste this key under jenkins console
+good
+sorry in the afternoon i just history and pinged those commands
+now i removed where i did mistake
+just fallow above commands
