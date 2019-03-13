@@ -1,0 +1,32 @@
+First install java 1.8.0 and remove h=java 1.7.0
+
+the..........................." find /usr -name java "
+copy the one like this " /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.201.b09-0.43.amzn1.x86_64 "
+
+then enter sudo vim /etc/profile
+
+in there, export like this:
+................................export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.201.b09-0.43.amzn1.x86_64
+................................export PATH=$PATH:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.201.b09-0.43.amzn1.x86_64/bin/
+
+make this the source of your paths:-------:source /etc/profile
+
+add a user for security purposes............sudo useradd -d /var/lib/jenkins jenkins
+generate the key............................ssh-keygen
+create a directory inside jenkins from where the ssh will happen...........sudo mkdir /var/lib/jenkins/.ssh
+ 
+ 
+go here and copy the public key............................................sudo vim /home/ec2-user/.ssh/id_rsa.pub
+
+paste it over here.........................................................sudo vi /var/lib/jenkins/.ssh/authorized_keys
+
+
+give the ownership to the created owner....................................sudo chown -R jenkins:jenkins /var/lib/jenkins/.ssh
+
+see the private key coz you're gonna need it soon...........................cat /home/ec2-user/.ssh/id_rsa
+
+
+go to your master console
+~create new node
+~give username and private sshkey
+~if youre all set it will go alright
