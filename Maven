@@ -1,0 +1,13 @@
+When Jenkins is already installed, maven must be installed in the slave node.
+
+
+sudo yum install java-1.8.0
+sudo yum remove java-1.7.0
+tar -xf apache-maven-3.5.4-bin.tar.gz
+rm -rf apache-maven-3.5.4-bin.tar.gz
+sudo find / -name mvn
+sudo vim /etc/profile.d/maven.sh
+sudo chmod +x maven.sh
+sudo chown ec2-user:ec2-user maven.sh
+source /etc/profile.d/maven.sh
+mvn --version
