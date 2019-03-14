@@ -8,6 +8,11 @@ tar -xf apache-maven-3.5.4-bin.tar.gz
 rm -rf apache-maven-3.5.4-bin.tar.gz
 sudo find / -name mvn
 sudo vim /etc/profile.d/maven.sh
+
+inside maven.sh type
+export M2_HOME=/home/ec2-user/apache-maven-3.5.4
+export PATH=${M2_HOME}/bin:${PATH}
+
 sudo chmod +x maven.sh
 sudo chown ec2-user:ec2-user maven.sh
 source /etc/profile.d/maven.sh
