@@ -3,6 +3,7 @@ When Jenkins is already installed, maven must be installed in the slave node.
 
 sudo yum install java-1.8.0
 sudo yum remove java-1.7.0
+wget http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
 tar -xf apache-maven-3.5.4-bin.tar.gz
 rm -rf apache-maven-3.5.4-bin.tar.gz
 sudo find / -name mvn
