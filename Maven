@@ -7,7 +7,10 @@ wget http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5
 tar -xf apache-maven-3.5.4-bin.tar.gz
 rm -rf apache-maven-3.5.4-bin.tar.gz
 sudo find / -name mvn
-sudo vim /etc/profile.d/maven.sh
+cd /etc/profile.d
+sudo vim maven.sh
+
+
 
 inside maven.sh type
 export M2_HOME=/home/ec2-user/apache-maven-3.5.4
