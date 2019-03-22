@@ -1,0 +1,8 @@
+create user
+give them root access
+create ssh-keygen
+go to "sudo nano /etc/ssh/sshd_config" and change the "Password Authentication" to yes
+then restart the sshd "sudo service sshd restart"
+
+now you can copy your key to the slave servers by ssh-copy-id username@private-ip-address
+if successful then login to the slave node from your remote node by ssh username@private-ip-address
